@@ -33,3 +33,9 @@ command:
 ls --help   # prints a quick built-in guide
 man COMMAND # opens a longer manual of that command
 ```
+# Search
+command:
+```bash
+find . -name "NAME"  # find all files that matching the search conditions 
+grep -n "TEXT" FILE # find matching text inside specified file
+```

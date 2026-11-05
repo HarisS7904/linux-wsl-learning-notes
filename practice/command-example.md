@@ -115,3 +115,41 @@ expected output:
 -rwxrwxrwx user user timestamp note.txt
 ```
 
+# Search
+Assumes that in note1.txt and note2.txt in the same folder and contain:
+```text
+This is a note.
+This use to test Linux command
+```
+
+command:
+```bash
+find . -name "*.txt"
+```
+
+expected output:
+```text
+./note2.txt
+./note1.txt
+```
+
+command:
+```bash
+grep -n "Linux" note1.txt
+```
+
+expected output:
+```text
+2:This use to test Linux command
+```
+
+command:
+```bash
+grep -n "Linux" note1.txt note2.txt
+```
+
+expected output:
+```text
+note1.txt:2:This use to test Linux command
+note2.txt:2:This use to test Linux command
+```
